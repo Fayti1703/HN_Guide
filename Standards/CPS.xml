@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Person id="" handle="" firstName="" lastName="" isMale="" forceHasNeopals="">  
+	<!-- Birth information -->
+	
+		<Birthplace name=""/>
+		<DOB>xx/xx/xxxx xx:xx:xx</DOB>
+	
+	<!-- Academic Information -->
+	
+		<Degrees>
+			<Degree uni="" gpa="x.x"></Degree>
+		</Degrees>
+		
+	<!-- Medical Information -->
+
+		<Medical>
+			<Blood></Blood>
+			<Height></Height>
+			<Allergies></Allergies>
+			<Perscription></Perscription>
+			<Perscription></Perscription>  
+			<Notes></Notes>
+		</Medical>
+	
+	<!-- This note wont show up -->
+	<Notes></Notes>
+</Person>

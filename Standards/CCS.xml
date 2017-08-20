@@ -1,0 +1,251 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Computer id="" name="" ip="" security="" icon="" type="" allowsDefaultBootModule="">
+	<!-- Administration -->
+		<adminPass pass=""/>
+		<account username="" password="" type=""/>
+		<admin type="" resetPassword="" isSuper=""/>
+	<!-- Ports -->
+		<ports>21, 22, 25, 80, 104, 192, 211, 443, 554, 143, 3724, 6881, 9418</ports> <!-- Excluded 3659 -->
+		<portRemap>x=y</portRemap>
+		<portsForCrack val=""/>
+	<!-- Security -->
+		<proxy time=""/>
+		<firewall level="" solution="" additionalTime=""/>
+		<trace time=""/>
+		<tracker/> <!-- PASSIVE TRACE -->
+	<!-- Links and positioning -->
+		<dlink target=""/>
+		<positionNear target="" position="" total="" extraDistance="" force=""/>
+	<!-- Files -->
+		<file path="" name="">random text
+multiline
+		</file>
+	<!-- Encrypted Files -->
+		<encryptedFile path="" name=".dec" extension="" ip="" header="" pass="">random text</encryptedFile>
+		
+	<!-- Memory Dumps -->
+	
+		<!-- Generated using MemDumpGenerator.exe
+	
+		<Memory> 
+			<Commands>
+				<Command></Command>
+			</Commands> 
+			<Data> 
+				<Block>897325
+				can
+				multiline
+				98437985
+				</Block>
+			</Data> 
+			<Images> 
+				<Image></Image>
+			</Images> 
+		</Memory>
+	
+	-->
+	
+		<!-- Memory dump file
+		
+	<memoryDumpFile name=".md" path="">
+		<Memory> 
+			<Commands>
+				<Command></Command>
+			</Commands> 
+			<Data> 
+				<Block>897325
+				can
+				multiline
+				98437985
+				</Block>
+			</Data> 
+			<Images> 
+				<Image></Image>
+			</Images> 
+		</Memory>
+	</memoryDumpFile>
+	
+	-->
+	
+	<!-- eOS-Device
+		<eosDevice name="" id="" icon="" empty="" passOverride=""> 
+			<note>HEADER
+actual text
+			</note>  
+			<mail username="" pass="" /> 
+			<file path="eos/test" name="crackedFile.txt">This is mostly useful for jailbroken phones</file> <- ?
+		</eosDevice> 
+	-->
+</Computer>
+
+	<!-- ALL DAEMONS -->
+	
+	<!-- People system daemons
+		
+		<MedicalDatabase/>
+		<academicDatabase/>
+		<deathRowDatabase/>
+		<PointClicker/>
+		
+		- Mailserver
+		
+			<mailServer name="" color="x,x,x" generateJunk="">
+				<email recipient="" sender="" subject=""></email>
+			</mailServer>
+	-->
+	
+	<!-- Faction specific [DHS excluded]
+		
+		<uploadServerDaemon name="" folder="" needsAuth="" color="x,x,x"/>
+		
+		<messageBoard name="">
+			<thread></thread>
+		</messageBoard>
+	
+		<variableMissionListingServer name="" iconPath="" articleFolderPath="" color="x,x,x" assigner="" public="" title=""/>
+		
+		<missionHubServer groupName="" serviceName="" missionFolderPath="" themeColor="x,x,x" lineColor="x,x,x" backgroundColor="x,x,x" allowAbandon=""/>
+	-->	
+		
+	<!-- Delay daemons [DHS included]
+		
+		<FastActionHost />
+		
+		<IRCDaemon themeColor="x,x,x" name="" needsLogin="">
+			<user name="" color="x,x,x"/>
+			<post user=""></post>
+		</IRCDaemon>
+		
+		<DHSDaemon groupName="" addsFactionPointOnMissionComplete="" autoClearMissionsOnPlayerComplete="" themeColor="x, x, x" allowContractAbbandon="">
+			<agent name="" pass="" color="x,x,x"/>
+		</DHSDaemon>
+	-->
+	
+	<!-- (Picture) Displaying daemons
+	
+		<LogoDaemon Name="Logo Display Test" ShowsTitle="true" TextColor="0, 220, 220, 200" LogoImagePath="Logo.png"></LogoDaemon>
+		<LogoCustomConnectDisplayDaemon logo="Logo.png" title="Logo.png" overdrawLogo="true" buttonAlignment="left"/>
+		<CustomConnectDisplayDaemon/>
+	-->
+	
+	<!-- Whitelists
+	
+		<WhitelistAuthenticatorDaemon SelfAuthenticating="false"/>
+		<WhitelistAuthenticatorDaemon Remote="RemoteServerID"/>
+		<WhitelistAuthenticatorDaemon SelfAuthenticating="true"/>
+	-->
+	
+	<!-- Miscellaneous
+	
+		- Database Daemon
+			
+			<DatabaseDaemon Permissions="private" DataType="GitCommitEntry" Foldername="database" Color="85,0,150" AdminEmailAccount="Matt@TestExtensionMail.com" AdminEmailHostID="advExamplePC" Name="Test database">
+				<GitCommitEntry>
+					<EntryNumber>8613</EntryNumber>
+					<ChangedFiles>
+						<String>Neopals.php</String>
+					</ChangedFiles>
+					<Message>Reverted Minor updates because it broke everything</Message>
+					<UserName>T.Champer</UserName
+					<SourceIP>192.168.1.1 (Localhost)</SourceIP>
+				</GitCommitEntry> 
+				<GitCommitEntry>
+					<EntryNumber>8611</EntryNumber>
+					<ChangedFiles> 
+						<String>Content.pak</String>
+					</ChangedFiles>
+					<Message>REMOTE COMMIT: Decreased pelvis bulge on Sparkle costume set :(</Message> <UserName>A.Wallin</UserName>
+					<SourceIP>54.192.234.65</SourceIP> 
+				</GitCommitEntry> 
+			</DatabaseDaemon>
+	
+	
+		- ISP System
+		
+			<ispSystem/>
+			
+			
+		- Webserver (requires html and stuff)
+			
+			<addWebServer name="" url=""/>
+			
+			
+		- Songchanger
+			
+			<SongChangerDaemon/>
+			
+		- Credits Server
+		
+			<CreditsDaemon Title="" ButtonText="" ConditionalActionSetToRunOnButtonPressPath=""/>
+	-->
+	
+	
+	<!-- ALL WILDCARDS -->
+	
+	<!-- Program wildcards
+	
+		- Port Crackers
+			
+			<file path="bin" name="FTPBounce.exe">#FTP_CRACK#</file>
+			<file path="bin" name="FTPSprint.exe">#FTP_FAST_EXE#</file>
+			<file path="bin" name="SSHCrack.exe">#SSH_CRACK#</file>
+			<file path="bin" name="SMTPOverflow.exe">#SMTP_CRACK#</file>
+			<file path="bin" name="WebServerWorm.exe">#WEB_CRACK#</file>
+			<file path="bin" name="KBTPortTest.exe">#MEDICAL_PROGRAM#</file>
+			<file path="bin" name="PacificPortcrusher.exe">#PACIFIC_EXE#</file>
+			<file path="bin" name="SSLTrojan.exe">#SSL_EXE#</file>
+			<file path="bin" name="RTSPCrack.exe">#RTSP_EXE#</file>
+			<file path="bin" name="SQLBufferOverflow.exe">#SQL_CRACK#</file>
+			<file path="bin" name="TorrentStreamInjector.exe">#TORRENT_EXE#</file>
+	
+		- Scanners + Decrypter
+			
+			<file path="bin" name="Decypher.exe">#DECYPHER_PROGRAM#</file>
+			<file path="bin" name="DECHead.exe">#DECHEAD_PROGRAM#</file>
+			<file path="bin" name="eosDeviceScan.exe">#EOS_SCANNER_EXE#</file>
+			<file path="bin" name="MemDumpGenerator.exe">#MEM_DUMP_GENERATOR#</file>
+			<file path="bin" name="MemForensics.exe">#MEM_FORENSICS_EXE#</file>
+			
+		- Supporting tools
+		
+			<file path="bin" name="DNotes.exe">#NOTES_DUMPER_EXE#</file>
+			<file path="bin" name="OpShell.exe">#SHELL_OPENER_EXE#</file>
+			<file path="bin" name="ComShell.exe">#SHELL_CONTROLLER_EXE#</file>
+			<file path="bin" name="Tracekill.exe">#TRACEKILL_EXE#</file>
+			<file path="bin" name="SignalScramble.exe">#SIGNAL_SCRAMBLER_EXE#</file>
+			<file path="bin" name="SecurityTracer.exe">#SECURITYTRACER_PROGRAM#</file>
+			
+		- Miscellaneous
+		
+			<file path="bin" name="ThemeChanger.exe">#THEMECHANGER_EXE#</file>
+			<file path="bin" name="ESequencer.exe">#EXT_SEQUENCER_EXE#</file>
+			<file path="bin" name="Tuneswap.exe">#DLC_MUSIC_EXE#</file>
+			
+		- TRUE ULTIMATE POWER!!!11eleven1337
+		
+			<file path="bin" name="Clock.exe">#CLOCK_PROGRAM#</file>
+			<file path="bin" name="HexClock.exe">#HEXCLOCK_EXE#</file>
+	-->
+	
+	<!-- Non-Program wildcards
+	
+		- Formatting
+			
+			#BINARY#
+			#BINARY_SMALL#
+			#PLAYER_IP#
+			#RANDOM_IP#
+			#PLAYERNAME#
+			
+		- Themes
+		
+			<file path="sys" name="White-Theme.sys">#WHITE_THEME#</file>
+			<file path="sys" name="Green-Theme.sys">#GREEN_THEME#</file>
+			<file path="sys" name="Yellow-Theme.sys">#YELLOW_THEME#</file>
+			<file path="sys" name="Teal-Theme.sys">#TEAL_THEME#</file>
+			<file path="sys" name="Base-Theme.sys">#BASE_THEME#</file>
+			<file path="sys" name="LE-Theme.sys">#PURPLE_THEME#</file>
+			<file path="sys" name="Mint-Theme.sys">#MINT_THEME#</file>
+	-->
+	
+<!-- Base File: Cyrol's computer standard (CCS) -->

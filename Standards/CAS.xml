@@ -1,0 +1,82 @@
+<ConditionalActions>
+</ConditionalActions>
+
+	<!-- ALL TRIGGERS -->
+
+	<!-- Computer specific
+	
+		<OnConnect target="" needsMissionComplete="true" requiredFlags="decypher"></OnConnect>			-=- Triggers when the player connects to a target
+		<OnDisconnect target=""></OnDisconnect>															-=- Triggers when the player disconnects from a target
+		<OnAdminGained target=""></OnAdminGained>														-=-	Triggers when the player gets admin rights on a target
+	-->
+	
+	<!-- Faction/Mission specific
+	
+		<HasFlags requiredFlags="decypher,otherFlag"></HasFlags>										-=- Triggers when the player earned certain flags
+		<DoesNotHaveFlags Flags="SomeFlag,MoreFlags"></DoesNotHaveFlags>								-=- Triggers when the player doesn't have certain flags
+		<Instantly needsMissionComplete="true"></Instantly>												-=- Triggers instantly when the mission has been completed
+	-->
+	
+	<!-- Instantly
+	
+		<Instantly></Instantly>																			-=- Does not need any explanation, does it.
+	-->
+	
+	<!-- ALL ACTIONS -->
+	
+	<!-- General
+	
+		<AddConditionalActions Filepath="x" DelayHost="" Delay=""/>			-=- Runs another ConditionalActions.xml file; Add in the filepath  for x in 'Filepath="x"'
+		<SaveGame DelayHost="" Delay=""/>									-=- Saves the game
+	-->
+	
+	<!-- Mission specific
+	
+		<RunFunction FunctionName="" FunctionValue=""/>			-=- Runs a missions function
+		<LoadMission MissionName=""/>							-=- Loads in a mission, replacing anything running atm
+	-->
+	
+	<!-- Faction specific
+	
+		<AddAsset FileName="" FileContents="" TargetComp="" TargetFolderpath=""/>						-=- Adds a file to the defined computer id. Useful for asset servers
+		<CopyAsset DestFilePath="" DestComp="" SourceComp="" SourceFileName="" SourceFilePath=""/>		-=-	Copies files from the source comp id to the dest comp id. Can be used for adding programs to the assets server
+		<AddMissionToHubServer MissionFilepath="" TargetComp="" AssignmentTag=""/>						-=-	Bibliotheque/Entropy styled mission adding; Add AssignmentTag="top" for it to appear on the top of Entropy mission boards. Otherwise use this to lock missions on a DHS Daemon by inserting a user's name.
+		<AddMissionToHubServer MissionFilepath="" TargetComp=""/>										-=-	CSEC styled mission adding
+		<AddThreadToMissionBoard ThreadFilepath="" TargetComp=""/>										-=-	/el styled mission adding. Thread needs to be UTF-8 (.txt is recommended)
+		<RemoveMissionFromHubServer MissionFilepath="" TargetComp=""/>									-=-	Removes a mission from a hub server
+	-->
+	
+	<!-- IRC/DHS
+	
+		<AddIRCMessage Author="" TargetComp="" Delay="">@#PLAYERNAME#</AddIRCMessage> 																	-=- Message for #PLAYERNAME#
+		<AddIRCMessage Author="" TargetComp="" Delay="">@channel</AddIRCMessage> 																		-=- Contacts the whole channel/Pings
+		<AddIRCMessage Author="" TargetComp="" Delay="">!ANNOUNCEMENT! - @channel</AddIRCMessage>														-=- Adds a red line and pings the channel														
+		<AddIRCMessage Author="" TargetComp="" Delay="">!ATTACHMENT:note#%#Note Title#%#Note Content</AddIRCMessage> 									-=- Adds a note to the IRC/DHS. Can be multilined
+		<AddIRCMessage Author="" TargetComp="" Delay="">!ATTACHMENT:link#%#ComputerName#%#123.123.123.123</AddIRCMessage>								-=- Adds a computer to the IRC/DHS. The computer name needs to be accurate
+		<AddIRCMessage Author="" TargetComp="" Delay="">!ATTACHMENT:account#%#TargetCompID#%#123.123.123.123#%#admin#%#password</AddIRCMessage>			-=- Adds account detail to the IRC/DHS
+	-->
+	
+	<!-- Ambient/Hacking
+		
+		- Ambient
+			<AppendToFile DelayHost="" Delay="" TargetComp="" TargetFolderpath="" TargetFilename=""></AppendToFile>									-=- Adds content to the TargetFilename=""
+			<GivePlayerUserAccount DelayHost="" Delay="" TargetComp="" Username=""/>																-=- Gives account data to the player on the targeted computer as an auto-complete option 
+			<ChangeAlertIcon Target="" Type="" DelayHost="" Delay=""/>																				-=- Changes the icon for accessing the contract information base; possible: irc, irchub, mail, board - irc: shows irc as main info source; irchub: shows dhs an main info source; mail: shows mail server as main info source; board: shows /el board as main info source.
+			<ChangeIP DelayHost="" Delay="" TargetComp="" NewIP=""/>																				-=- Changes the IP of the targetted computer		
+			<SwitchToTheme ThemePathOrName="" FlickerInDuration="" DelayHost="" Delay=""/>															-=- Switches the active theme to the one defined in 'ThemePathOrName=""'; FlickerInDuration is the number of seconds it uses to appear completely - great for use as an effect
+			<StartScreenBleedEffect AlertTitle="" CompleteAction="" TotalDurationSeconds="" DelayHost="" Delay=""></StartScreenBleedEffect>			-=- Starts a screen bleeding sequence, f.e. when doing the ETAS; AlertTitle is the heading displayed in the bottom left corner.; CompleteAction is the action file, which runs when the screen bleed has finished, f.e. it runs a hacker script in BleedEnd.xml to punish the players' failure; You can insert 3 lines of text betwenn <ScreenBleedEffect> and </ScreenBleedEffect>			
+			<CancelScreenBleedEffect DelayHost="" Delay=""/>																						-=- Cancels the currently active screen bleed
+			
+		- Hacking
+			<LaunchHackScript Filepath="" DelayHost="" Delay="" SourceComp="" TargetComp="" RequireLogsOnSource="" RequireSourceIntact=""/>			-=- Launches the given hacker script; Defining SourceComp and TargetComp here will automatically define them for the hackerscript - useful for multi using one; RequireLogsOnSource makes this command run when the player leaves the computer without clearing the logs; RequireSourceIntact makes this command run when the SourceComp's /sys file is intact
+			<CrashComputer TargetComp="" CrashSource="" DelayHost="" Delay=""/>																		-=- Immediately crashes the TargetComp
+			<KillExe DelayHost="" Delay="" ExeName=""/>																								-=- Kills the defined executable
+			<DeleteFile TargetComp="" FilePath="" FileName="" DelayHost="" Delay=""/>																-=-	Deletes a file under FilePath on TargetComp 
+			
+			- For Nodemap
+				<HideNode DelayHost="" Delay="" TargetComp=""/>																						-=- Hides a specified node (TargetComp)
+				<HideAllNodes DelayHost="" Delay=""/>																								-=-	Hides every node visible on the map
+				<ShowNode DelayHost="" Delay="" Target=""/>																							-=- Shows a specified node (Target)
+	-->
+
+<!-- Base File: Cyrol's Conditional Actions Standard (CCAS/CAS) -->

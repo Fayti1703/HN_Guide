@@ -1,0 +1,97 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<mission id="" activeCheck=""> <!-- Base File: Cyrol's mission standard (CMS) -->
+	<!-- Goals -->
+		<goals>
+			<goal type=""/>
+		</goals>
+	<!-- Mission continuation -->
+		<missionStart val=""></missionStart>
+		<missionEnd val=""></missionEnd>
+		<nextMission>NONE</nextMission>
+	<!-- Branches -->
+	<!--
+		<branchMissions>
+			<branch>Missions/BranchExample/TestBranchMission.xml</branch>
+		</branchMissions> 
+	-->
+	<!-- Post + Email -->
+		<posting title="" reqs="" requiredRank=""></posting>
+		<email>
+			<sender></sender>
+			<subject></subject>
+			<body></body>
+			<attachments>
+				<link comp=""/>
+				<note title=""></note>
+				<account comp="" user="" pass=""/>
+			</attachments>
+		</email>
+</mission>
+
+
+	<!-- ALL GOALS -->
+	
+	<!-- File specific [excluded filechange]
+	
+		<goal type="filedownload" target="" file="" path=""/>															-=-	Download file="" under path="" on target="" for completion
+		<goal type="fileupload" target="" file="" path="" destTarget="" destPath=""/>									-=-	Upload file="" under path="" from target="" to destPath="" on destTarget="" 
+		<goal type="fileupload" target="" file="" path="" destTarget="" destPath="" decrypt="" decryptPass=""/>			-=-	Upload file="" under path="" from target="" to destPath="" on destTarget=""; decrypt="" will, if used, set, wether the file has to be uploaded decrypted or not; decryptPass="" must be used when the uploaded file needed a password for decryption
+		<goal type="filedeletion" target="" file="" path=""/>															-=- Delete file="" under path="" on target="" for completion
+		<goal type="clearfolder" target="" path=""/>																	-=-	Clear the folder path="" on target="" for completion
+	-->
+	
+	<!-- Obtaining
+	
+		<goal type="getadmin" target=""/>						-=- Get admin access on target="" for completion
+		<goal type="getstring" target="" />						-=-	Get the information target="" and put it in the additional details for completion
+		<goal type="getadminpasswordstring" target=""/>			-=-	Get the overall admin password from target="" and put it in the additional details for completion; <- Useful for nodes using resetPassword="true" admins
+		<goal type="hasFlag" target=""/>						-=- Obtain flag target="" for completion	
+	-->
+	
+	<!-- Changing  [filechange included]
+	
+		<goal type="AddDegree" owner="" degree="" uni="" gpa="x.x"/>							-=-	Add the degree="" for owner="" with the gpa="x.x" for completion
+		<goal type="wipedegrees" owner=""/>														-=-	Wipe the degrees from owner="" clean for completion
+		<goal type="filechange" target="" file="" path="" keyword="" caseSensitive=""/>			-=- Change the file="" under path="" on target="", so that the keyword="" appears for completion; caseSensitive="" will, if set to true, check if the word has been written in the way it is defined by keyword="" f.e.: keyword="HELLO" caseSensitive="true" -> player needs to add HELLO and not f.e. hello
+		<goal type="filechange" target="" file="" path="" keyword="" removal=""/>				-=- Remove keyword="" from file="" under path="" on target="" for completion; be sure to set removal="" to true for this to work.
+	-->
+	
+	<!-- Waiting
+	
+		<goal type="delay" time="x.x"/>			-=- Self explanatory obviously. time="x.x" defines how long the player needs to wait for this mission to complete.
+	-->
+	
+	<!-- ALL FUNCTIONS -->
+	
+	<!-- Faction specific
+		
+		- SetUp
+		
+			<missionStart>setFaction:</missionStart> ; <missionEnd>setFaction:</missionEnd>
+			<missionStart>setHubServer:</missionStart> ; <missionEnd>setHubServer:</missionEnd>
+			<missionStart>setAssetServer:</missionStart> ; <missionEnd>setAssetServer:</missionEnd>
+		
+		- Adding
+			
+			<missionStart val="">addRank</missionStart> ; <missionEnd val="">addRank</missionEnd>
+			<missionStart val="">addRankSilent</missionStart> ; <missionEnd val="">addRankSilent</missionEnd>
+			<missionStart val="">addRankFaction:</missionStart> ; <missionEnd val="">addRankFaction:</missionEnd>
+			<missionStart>addFlags:</missionStart> ; <missionEnd>addFlags:</missionEnd>
+			<missionStart>removeFlags:</missionStart> ; <missionEnd>removeFlags:</missionEnd>
+	-->
+	
+	<!-- Music
+	
+		<missionStart val="">changeSong</missionStart> ; <missionEnd val="">changeSong</missionEnd>
+		<missionStart val="">changeSongDLC</missionStart> ; <missionEnd val="">changeSongDLC</missionEnd>
+		<missionStart>playCustomSong:</missionStart> ; <missionEnd>playCustomSong:</missionEnd>
+		<missionStart>playCustomSongImmediatley:</missionStart> ; <missionEnd>playCustomSongImmediatley:</missionEnd>
+	-->
+	
+	<!-- Call Conditional Actions
+		
+		<missionStart val="">loadConditionalActions:</missionStart> ; <missionEnd val="">loadConditionalActions:</missionEnd>
+	-->
+
+
+<!-- Base File: Cyrol's mission standard (CMS) -->	
